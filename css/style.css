@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+    --cor-fundo: #F2F2F2;
+    --cor-principal: #535353;
+    --cor-secundaria: #727272;
+    --fonte-principal: 'Press Start 2P', system-ui;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    font-family: var(--fonte-principal);
+}
+
+#mapa {
+    padding-top: 10%;
+    position: relative;
+}
+
+.apresentacao__classificacao {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.apresentacao__pontuacao {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.pontuacao {
+    font-size: 0.9rem;
+}
+
+#input__nick {
+    width: 20%;
+    height: 20px;
+    text-align: center;
+    font-family: var(--fonte-principal);
+    font-size: 0.815rem;
+}
+
+.maior__pontuacao {
+    color: var(--cor-secundaria);
+}
+
+.pontuacao__atual {
+    color: var(--cor-principal);
+}
+
+.linha {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.quadrado {
+    margin: 0 -1px;
+    position: relative;
+    background-color: var(--cor-fundo);
+    width: 5vw;
+    height: 5vw;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    z-index: 2;
+}
+
+.imagem__botao {
+    width: 7vw;
+    border-radius: inherit;
+}
+
+
+.botao__iniciar,
+.botao__reiniciar {
+    position: absolute;
+    z-index: 2;
+    margin-top: 20%;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    border: none;
+}
+
+
+
+
+.botao__classificacao {
+    float: right;
+    margin-right: 17rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    background-color: transparent;
+}
+
+.imagem__botao-classificacao {
+    width: 6vw;
+    border-radius: inherit;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+}
+
+.conteudo__modal {
+    background-color: #DCDCDC;
+    margin: 10% auto;
+    padding: 2rem;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+.topo__modal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex-direction: row-reverse;
+}
+
+.fechar {
+    color: #aaa;
+    float: right;
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.fechar:hover,
+.fechar:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.conteudo__modal__titulo{
+    color: var(--cor-principal);
+    align-items: center;
+}
+
+.lista {
+    color: var(--cor-principal);
+    margin: 1rem 5rem 0 4rem;
+}
+
+.item__lista {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.item__lista span {
+    flex: 1;
+    text-align: right;
+}
+
+.botao__zerar-classificacao {
+    margin-top: 10px;
+    display: none;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    background-color: transparent;
+}
+
+.dino {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    display: flex;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 1;
+}
+
+.dino-pe-direito {
+    background-image: url("./../images/dino-pe-direito.png");
+}
+
+.dino-pe-esquerdo {
+    background-image: url("./../images/dino-pe-esquerdo.png");
+}
+
+.dino-pulo {
+    background-image: url("./../images/dino-pulo.png");
+}
+
+.dino-morto {
+    background-image: url("./../images/dino-morrendo.png");
+}
+
+.chao-padrao,
+.chao-morrinho,
+.chao-buraco,
+.nuvem {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    display: flex;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 0;
+    flex: 1;
+}
+
+.cacto-padrao,
+.cacto-pequeno-simples,
+.aereo {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    display: flex;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 1;
+    flex: 1;
+}
+
+.chao-padrao {
+    background-image: url("./../images/fundo-1.png");
+}
+
+.chao-buraco {
+    background-image: url("./../images/fundo-2.png");
+}
+
+.chao-morrinho {
+    background-image: url("./../images/fundo-3.png");
+}
+
+.nuvem {
+    background-image: url("./../images/nuvem.png");
+}
+
+.cacto-padrao {
+    background-image: url("./../images/cacto-simples.png");
+}
+
+.cacto-pequeno-simples {
+    background-image: url("./../images/cacto-pequeno.png");
+}
+
+.dino-aereo-alto {
+    background-image: url("./../images/aero-alto.png");
+}
+
+.dino-aereo-baixo {
+    background-image: url("./../images/aero-baixo.png");
+}
+
+.invisivel {
+    display: none;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    #mapa {
+        padding-top: 20%;
+    }
+    .topo__modal {
+        font-size: 95%;
+    }
+    .lista {
+        font-size: 85%;
+        margin: 1rem 2.3rem 0 2.4rem;
+    }
+
+    .botao__classificacao {
+        margin-right: 8rem;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+
+    #mapa {
+        padding-top: 25%;
+    }
+
+    .apresentacao__pontuacao {
+        margin-right: 10%;
+    }
+
+    .pontuacao {
+        font-size: 0.7rem;
+    }
+
+    .conteudo__modal {
+        width: 60%;
+    }
+
+    .topo__modal {
+        font-size: 75%;
+    }
+
+    .lista{
+        font-size: 65%;
+        margin: 0.5rem 0.5rem 0 1.3rem;
+    }
+
+    #input__nick {
+        height: 10px;
+        margin-left: 3rem;
+        font-size: 0.6rem;
+    }
+    
+    .botao__zerar-classificacao {
+        display: block;
+    }
+
+    .botao__classificacao {
+        margin-right: 8rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    #mapa {
+        padding-top: 25%;
+    }
+
+    .pontuacao {
+        font-size: 0.5rem;
+    }
+
+    .conteudo__modal {
+        width: 70%;
+    }
+
+    .topo__modal {
+        font-size: 55%;
+    }
+
+    .lista{
+        font-size: 50%;
+        margin: 0.5rem 0 0 0.5rem;
+    }
+
+
+    #input__nick {
+        width: 25%;
+        height: 10px;
+        margin-left: 3rem;
+        font-size: 0.6rem;
+    }
+
+    .botao__zerar-classificacao {
+        display: block;
+    }
+
+    .botao__classificacao {
+        margin-right: 5rem;
+    }
+}
+
+/* Aumentando o padding para os celulares em LandScape*/
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+
+    #mapa {
+        padding-top: 5%;
+    }
+
+    #input__nick {
+        height: 10px;
+        margin-left: 2rem;
+        font-size: 0.6rem;
+    }
+
+    .botao__classificacao {
+        margin-right: 8rem;
+    }
+
+    .botao__zerar-classificacao {
+        display: block;
+    }
+}

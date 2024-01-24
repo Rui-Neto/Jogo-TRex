@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./images/dino-pe-esquerdo.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/criaDivs.js" defer></script>
+    <script src="./js/dino.js" defer></script>
+    <script src="./js/paisagem.js" defer></script>
+    <script src="./js/movimentoPaisagem.js" defer></script>
+    <script src="./js/inimigos.js" defer></script>
+    <script src="./js/movimentoInimigos.js" defer></script>
+    <script src="./js/colisao.js" defer></script>
+    <script src="./js/pontuacao.js" defer></script>
+    <script src="./js/randomizacao.js" defer></script>
+    <script src="./js/botoes.js" defer></script>
+    <script src="./js/classificacao.js" defer></script>
+    <script src="./js/main.js" defer></script>
+    <title>T-Rex</title>
+</head>
+
+<body>
+    <main id="container">
+        <div id="mapa">
+            <div class="apresentacao__classificacao">
+                <input type="text" placeholder="nickname" autofocus id="input__nick" maxlength="6">
+                <div class="apresentacao__pontuacao">
+                    <p class="pontuacao maior__pontuacao">HS: 00000</p>
+                    <p id="placar" class="pontuacao pontuacao__atual">00000</p>
+                </div>
+            </div>
+            <div class="botoes">
+                <button id="iniciar" class="botao__iniciar">
+                    <img class="imagem__botao" src="./images/botao-iniciar.png" alt="Botão de iniciar">
+                </button>
+                <button id="reiniciar" class="botao__reiniciar invisivel">
+                    <img class="imagem__botao" src="./images/botao-reiniciar.png" alt="Botão de reiniciar">
+                </button>
+            </div>
+        </div>
+
+        <button id="classificacaoModalBtn" class="botao__classificacao">
+            <img class="imagem__botao-classificacao" src="./images/botao-classificacao.png" alt="Botão de classificação">
+        </button>
+        <div id="classificacao" class="modal">
+            <div class="conteudo__modal">
+                <div class="topo__modal">
+                    <span class="fechar" id="fecharModalBtn">&times;</span>
+                    <p class="conteudo__modal__titulo">CLASSIFICAÇÃO:</p>
+                </div>
+                <ol class="lista">
+                </ol>
+                <button id="zerarClassificacao" class="botao__zerar-classificacao">
+                    <img class="imagem__botao-classificacao" src="./images/botao-remover-classificacao.png" alt="Botão de remover classificação">
+                </button>
+            </div>
+        </div>
+        <audio src="./images/pulo.m4a" id="som_pulo"></audio>
+        <audio src="./images/morte.m4a" id="som_morte"></audio>
+    </main>
+</body>
+
+</html>
