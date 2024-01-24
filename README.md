@@ -1,5 +1,5 @@
 ## Jogo
-[Jogo T-Rex](jogo-trex.azurewebsites.net/)
+[Jogo T-Rex](https://jogo-trex.azurewebsites.net/)
 
 ## Colaboradores
 Rui de Melo Neves Neto
